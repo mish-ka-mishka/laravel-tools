@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Traits;
+namespace Tools\Traits;
 
 use Exception;
 use Illuminate\Support\Facades\URL;
