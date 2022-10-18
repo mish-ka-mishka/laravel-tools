@@ -1,0 +1,45 @@
+{
+    "name": "mkaverin/laravel-tools",
+    "description": "This package contains simple tools for your Laravel application.",
+	"homepage": "https://github.com/mish-ka-mishka/laravel-tools",
+    "autoload": {
+        "psr-4": {
+            "Tools\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tools\\Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Michael",
+            "email": "m@kaverin.ml"
+        }
+    ],
+    "require": {
+	    "php": "^8.0|^8.1",
+	    "illuminate/contracts": "^8.0|^9.0",
+	    "illuminate/support": "^8.0|^9.0",
+        "illuminate/database": "^8.0|^9.0",
+        "illuminate/http": "^8.0|^9.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^5.0|^6.23|^7.0",
+        "phpunit/phpunit": "^9.5.10"
+    },
+    "suggest": {
+        "westacks/telebot": "Required for using Telegram tools",
+        "mkaverin/laravel-url-login": "Required for using AuthenticatesViaTelegram trait"
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit --colors=always",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+	"config": {
+		"sort-packages": true
+	},
+	"minimum-stability": "dev",
+	"prefer-stable": true
+}
