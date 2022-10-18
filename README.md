@@ -1,4 +1,4 @@
-# Laravel Comments
+# Laravel Tools
 
 This package contains simple tools for your Laravel application.
 

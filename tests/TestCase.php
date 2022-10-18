@@ -1,6 +1,6 @@
 <?php
 
-namespace Comments\Tests;
+namespace Tools\Tests;
 
 use Orchestra\Testbench\TestCase as Orchestra;
 
