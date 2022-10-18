@@ -76,6 +76,7 @@ trait HasSocials
             foreach (self::$validSocials as $item) {
                 if (in_array($domain, $item['domains'])) {
                     $title = $item['title'];
+
                     break;
                 }
             }

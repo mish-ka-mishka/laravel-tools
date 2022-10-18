@@ -17,7 +17,7 @@ trait HasTelegram
 {
     public function hasConnectedTelegram(): bool
     {
-        return !empty($this->tg_id) && !$this->has_blocked_bot;
+        return ! empty($this->tg_id) && ! $this->has_blocked_bot;
     }
 
     public function getTelegramProfileUrl(bool $asHtml = false): ?string
@@ -28,7 +28,7 @@ trait HasTelegram
 
         $url = 'https://t.me/' . $this->tg_username;
 
-        if (!$asHtml) {
+        if (! $asHtml) {
             return $url;
         }
 
@@ -69,7 +69,7 @@ trait HasTelegram
 
     public function setBlockedTelegramBot()
     {
-        if (!$this->has_blocked_bot) {
+        if (! $this->has_blocked_bot) {
             $this->has_blocked_bot = true;
             $this->save();
         }
@@ -99,10 +99,12 @@ trait HasTelegram
                     $this->tg_phone = null;
                     $this->tg_username = null;
                     $this->save();
+
                     break;
 
                 case 'Forbidden: bot was blocked by the user':
                     $this->setBlockedTelegramBot();
+
                     break;
             }
 

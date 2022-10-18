@@ -4,7 +4,7 @@ namespace Tools\Services;
 
 class CsvService
 {
-    static function getCsvAsArray(string $url): array
+    public static function getCsvAsArray(string $url): array
     {
         $csv = self::getCsvLines($url);
 
@@ -37,7 +37,7 @@ class CsvService
 
         $csv = array_map('str_getcsv', $content);
 
-        if (!is_array($csv)) {
+        if (! is_array($csv)) {
             throw new \InvalidArgumentException('Url content could not be converted to array');
         }
 

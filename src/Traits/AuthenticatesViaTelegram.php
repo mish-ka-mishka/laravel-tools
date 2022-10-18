@@ -2,9 +2,9 @@
 
 namespace App\Traits;
 
-use Tools\Services\TextService;
 use Exception;
 use Illuminate\Support\Facades\URL;
+use Tools\Services\TextService;
 use UrlLogin\Traits\AuthenticatesViaUrl;
 use WeStacks\TeleBot\Laravel\TeleBot;
 use WeStacks\TeleBot\Objects\Message;
@@ -22,7 +22,7 @@ trait AuthenticatesViaTelegram
 
     public function connectTelegram(User $user)
     {
-        if (!empty($this->tg_id) || !empty($this->tg_username)) {
+        if (! empty($this->tg_id) || ! empty($this->tg_username)) {
             throw new Exception('Already linked');
         }
 

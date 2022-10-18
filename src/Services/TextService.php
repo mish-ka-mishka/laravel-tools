@@ -94,7 +94,7 @@ class TextService
 
     public static function getNiceEnding(float $number, array $endings): string
     {
-        if (!isset($endings[2])) {
+        if (! isset($endings[2])) {
             $endings[2] = $endings[1];
         }
 
@@ -107,11 +107,13 @@ class TextService
             switch ($i) {
                 case 1:
                     $ending = $endings[0];
+
                     break;
                 case 2:
                 case 3:
                 case 4:
                     $ending = $endings[1];
+
                     break;
                 default:
                     $ending = $endings[2];
